@@ -25,15 +25,15 @@
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-4 flex items-center md:ml-6">
-                            <button type="button"
+                            <!-- <button type="button"
                                 class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                 <span class="absolute -inset-1.5" />
                                 <span class="sr-only">View notifications</span>
                                 <BellIcon class="h-6 w-6" aria-hidden="true" />
-                            </button>
+                            </button> -->
 
                             <!-- Profile dropdown -->
-                            <Menu as="div" class="relative ml-3">
+                            <!-- <Menu as="div" class="relative ml-3">
                                 <div>
                                     <MenuButton
                                         class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -63,7 +63,7 @@
 
                                     </MenuItems>
                                 </transition>
-                            </Menu>
+                            </Menu> -->
                         </div>
                     </div>
                     <div class="-mr-2 flex md:hidden">
@@ -91,7 +91,7 @@
                     </RouterLink>
 
                 </div>
-                <div class="border-t border-gray-700 pb-3 pt-4">
+                <!-- <div class="border-t border-gray-700 pb-3 pt-4">
                     <div class="flex items-center px-5">
                         <div class="flex-shrink-0">
                             <img class="h-10 w-10 rounded-full" :src="user.imageUrl" alt="" />
@@ -107,15 +107,15 @@
                             <BellIcon class="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
-                    <div class="mt-3 space-y-1 px-2">
 
+                    <div class="mt-3 space-y-1 px-2">
                         <RouterLink v-for="item in userNavigation" :key="item.name" :to="item.href"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
                             {{ item.name }}
                         </RouterLink>
-
                     </div>
-                </div>
+
+                </div> -->
             </DisclosurePanel>
         </Disclosure>
 
@@ -134,19 +134,19 @@ import { ref, watch } from 'vue';
 import { RouterLink, RouterView, useRoute } from 'vue-router';
 import { navRoutes } from '../router';
 
-const user = ref({
-    name: 'Tom Cook',
-    email: 'tom@example.com',
-    imageUrl:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-})
 const navigation = ref(navRoutes);
 
-const userNavigation = ref([
-    { name: 'Your Profile', href: '#' },
-    { name: 'Settings', href: '#' },
-    { name: 'Sign out', href: '#' },
-])
+// const userNavigation = ref([
+//     { name: 'Your Profile', href: '#' },
+//     { name: 'Settings', href: '#' },
+//     { name: 'Sign out', href: '#' },
+// ])
+// const user = ref({
+//     name: 'Tom Cook',
+//     email: 'tom@example.com',
+//     imageUrl:
+//         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+// })
 
 /** Router related
 // ========= ========== =============== ===========  **/
