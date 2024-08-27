@@ -1,17 +1,22 @@
+<script setup>
+import raw from "./BtnAltText.vue?raw";
+import BaseBtn from './_BaseBtn.vue';
+</script>
+
 <template>
-    <button class="btn-custom" role="button" @click="copyValue(raw)">
-        <!-- Primary text -->
-        <span class="text">
-            <slot name="primary-text"></slot>
-        </span>
-        <!-- Alternate text -->
-        <span>
-            <slot name="alt-text"></slot>
-        </span>
-    </button>
+    <BaseBtn :rawStr="raw" :altText="'Hover me'">
+        <template v-slot:alt="{ text, altText }">
+            <!-- Primary text -->
+            <span class="text">
+                {{ altText }}
+            </span>
+            <!-- Alternate text -->
+            <span>
+                {{ text }}
+            </span>
+        </template>
+    </BaseBtn>
 </template>
-<!-- HTML
-<button class="btn-custom"></button> -->
 
 <style scoped>
 .btn-custom {
@@ -72,14 +77,19 @@
 }
 
 .btn-custom:hover span:last-child {
-    transform: translateX(-50%) translateY(-100%);
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.btn-custom:focus:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+}
+
+.btn-custom:focus span:last-child {
+    transform: translateX(-50%) translateY(-50%);
     opacity: 1;
     transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
 }
 </style>
-
-<script setup>
-import raw from "./BtnAltText.vue?raw";
-import { copyValue } from "../copyValue";
-
-</script>

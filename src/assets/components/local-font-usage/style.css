@@ -1,9 +1,0 @@
-@font-face {
-  font-family: "Zombie lull";
-  src: url(./fonts/ZombieMessage.ttf),
-    url(./fonts/ZombieMessage.ttf) format("truetype");
-}
-
-h1 {
-  font-family: "Zombie lull", "Comic Sans MS", "Courier New", Courier, monospace;
-}

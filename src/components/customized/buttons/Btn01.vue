@@ -1,10 +1,11 @@
+<script setup>
+import raw from "./Btn01.vue?raw";
+import BaseBtn from './_BaseBtn.vue';
+</script>
+
 <template>
-    <button class="btn-custom" role="button" @click="btnClicked(raw)">
-        {{ text }}
-    </button>
+    <BaseBtn :rawStr="raw" />
 </template>
-<!-- HTML
-<button class="btn-custom"></button> -->
 
 <style scoped>
 .btn-custom {
@@ -42,6 +43,7 @@
 .btn-custom:focus {
     box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
         rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
 }
 
 .btn-custom:hover {
@@ -55,26 +57,3 @@
     transform: translateY(2px);
 }
 </style>
-
-<script setup>
-import raw from "./Btn01.vue?raw";
-
-import { copyValue } from "../copyValue";
-import { ref } from 'vue';
-
-const originalText = ref('Click me');
-const text = ref(originalText.value);
-
-function changeText() {
-  text.value = 'CSS copied';
-  // Revert back to original text after 3 seconds
-  setTimeout(() => {
-    text.value = originalText.value;
-  }, 3000);
-}
-
-function btnClicked(val) {
-    copyValue(val);
-    changeText();
-}
-</script>

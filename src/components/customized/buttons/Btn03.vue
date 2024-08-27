@@ -1,17 +1,22 @@
+<script setup>
+import raw from "./Btn03.vue?raw";
+import BaseBtn from './_BaseBtn.vue';
+</script>
+
 <template>
-    <button class="btn-custom" role="button" @click="copyValue(raw)">
-        <!-- Primary text -->
-        <span class="text">
-            <slot name="primary-text"></slot>
-        </span>
-        <!-- Alternate text -->
-        <span>
-            <slot name="alt-text"></slot>
-        </span>
-    </button>
+    <BaseBtn :rawStr="raw" :altText="'Hover me'">
+        <template v-slot:alt="{ text, altText }">
+            <!-- Primary text -->
+            <span class="text">
+                {{ altText }}
+            </span>
+            <!-- Alternate text -->
+            <span>
+                {{ text }}
+            </span>
+        </template>
+    </BaseBtn>
 </template>
-<!-- HTML
-<button class="btn-custom"></button> -->
 
 <style scoped>
 .btn-custom {
@@ -104,9 +109,3 @@
     transform: translateY(2px);
 }
 </style>
-
-<script setup>
-import raw from "./Btn03.vue?raw";
-import { copyValue } from "../copyValue";
-
-</script>

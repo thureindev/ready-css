@@ -1,5 +1,5 @@
 <template>
     <h1>
-        this is home view. 
+        Collection of CSS components. Interactive CSS generator coming soon.  
     </h1>
 </template>

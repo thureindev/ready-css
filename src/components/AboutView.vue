@@ -1,5 +1,5 @@
 <template>
     <h1>
-        This is about view.
+        Developed by thureindev
     </h1>
 </template>

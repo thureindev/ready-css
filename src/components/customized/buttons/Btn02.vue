@@ -1,10 +1,11 @@
+<script setup>
+import raw from "./Btn02.vue?raw";
+import BaseBtn from './_BaseBtn.vue';
+</script>
+
 <template>
-    <button class="btn-custom" role="button" @click="copyValue(raw)">
-        <slot></slot>
-    </button>
+    <BaseBtn :rawStr="raw" />
 </template>
-<!-- HTML
-<button class="btn-custom"></button> -->
 
 <style scoped>
 .btn-custom {
@@ -40,13 +41,13 @@
     font-size: 21px;
 }
 
-.btn-custom:focus {
-    /* box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset; */
-    box-shadow: rgb(255, 208, 180) 0 0 0 1.5px inset, rgba(255, 179, 0, 0.4) 0 4px 8px, rgba(255, 162, 0, 0.3) 0 7px 13px -3px, rgb(255, 128, 81) 0 -3px 0 inset;
-}
-
 .btn-custom:hover {
     box-shadow: rgb(255, 212, 119) 0 4px 8px, rgba(153, 97, 0, 0.3) 0 7px 13px -3px, rgb(255, 128, 81) 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.btn-custom:focus {
+    box-shadow: rgb(255, 208, 180) 0 0 0 1.5px inset, rgba(255, 179, 0, 0.4) 0 4px 8px, rgba(255, 162, 0, 0.3) 0 7px 13px -3px, rgb(255, 128, 81) 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
@@ -56,9 +57,3 @@
     transform: translateY(2px);
 }
 </style>
-
-<script setup>
-import raw from "./Btn02.vue?raw";
-import { copyValue } from "../copyValue";
-
-</script>
