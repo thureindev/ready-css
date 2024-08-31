@@ -1,5 +1,5 @@
 <script setup>
-import raw from "./Btn02.vue?raw";
+import raw from "./BtnPrimary01.vue?raw";
 import BaseBtn from './_BaseBtn.vue';
 </script>
 

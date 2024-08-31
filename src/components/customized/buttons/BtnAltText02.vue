@@ -1,10 +1,10 @@
 <script setup>
-import raw from "./BtnAltText.vue?raw";
+import raw from "./BtnAltText02.vue?raw";
 import BaseBtn from './_BaseBtn.vue';
 </script>
 
 <template>
-    <BaseBtn :rawStr="raw" :altText="'Hover me'">
+    <BaseBtn :rawStr="raw" altText="Hover me">
         <template v-slot:alt="{ text, altText }">
             <!-- Primary text -->
             <span class="text">

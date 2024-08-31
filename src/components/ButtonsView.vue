@@ -1,32 +1,29 @@
 <template>
     <div>
         <ShowcaseView>
-            <Btn01></Btn01>
-            <Btn02></Btn02>
-            <Btn03></Btn03>
-            <BtnAltText>
-                <template #primary-text>Hover me</template>
-                <template #alt-text>Click me</template>
-            </BtnAltText>
+            <BtnSecondary01></BtnSecondary01>
+            <BtnPrimary01></BtnPrimary01>
+            <BtnAltText01></BtnAltText01>
+            <BtnAltText02></BtnAltText02>
         </ShowcaseView>
     </div>
 </template>
 
 <script>
 import ShowcaseView from './ShowcaseView.vue';
-import Btn01 from './customized/buttons/Btn01.vue';
-import Btn02 from './customized/buttons/Btn02.vue';
-import Btn03 from './customized/buttons/Btn03.vue';
-import BtnAltText from './customized/buttons/BtnAltText.vue';
+import BtnSecondary01 from './customized/buttons/BtnSecondary01.vue';
+import BtnPrimary01 from './customized/buttons/BtnPrimary01.vue';
+import BtnAltText01 from './customized/buttons/BtnAltText01.vue';
+import BtnAltText02 from './customized/buttons/BtnAltText02.vue';
 
 export default {
-    name: 'NewGameView',
+    name: 'ButtonsView',
     components: {
         ShowcaseView,
-        Btn01,
-        Btn02,
-        Btn03,
-        BtnAltText,
+        BtnSecondary01,
+        BtnPrimary01,
+        BtnAltText01,
+        BtnAltText02,
     },
 }
 </script>
